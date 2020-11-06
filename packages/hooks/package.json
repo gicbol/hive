@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Collection of reusable React hooks",
   "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gicbol/hive.git",
+    "directory": "packages/hooks"
+  },
   "scripts": {
     "start": "webpack --watch --mode development",
     "build": "webpack --mode production",
@@ -38,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
