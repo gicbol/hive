@@ -1,0 +1,39 @@
+{
+  "name": "hive",
+  "description": "Collection of reusable React components, hooks, utilities, etc.",
+  "private": true,
+  "scripts": {
+    "build": "lerna bootstrap && lerna exec -- npm run build",
+    "publish": "lerna publish",
+    "clean": "lerna clean && lerna exec -- npm run clean"
+  },
+  "devDependencies": {
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  }
+}
