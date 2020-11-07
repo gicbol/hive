@@ -1,2 +1,4 @@
 // @flow
-export * from './src/useForm';
+import useForm from './src/useForm';
+
+export { useForm };
