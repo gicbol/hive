@@ -1,4 +1,2 @@
 // @flow
-import useForm from './src/useForm';
-
-export { useForm };
+export { default as useForm } from './src/useForm';

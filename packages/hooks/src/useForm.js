@@ -1,31 +1,10 @@
-// @flow
 import React from 'react';
 import get from 'lodash.get';
 import isEmpty from 'lodash.isempty';
 import isFunction from 'lodash.isfunction';
 import set from 'lodash.set';
 
-type CommonTypes = {
-  onSubmit: (Object, ?Function) => void,
-};
-
-type ErrorsType = Array<{ name: string, message: string }>;
-
-export type FormConfig = {
-  ...CommonTypes,
-  initialValues: Object,
-  validations: Function | Object,
-};
-
-export type FormProps = {
-  ...CommonTypes,
-  values: Object,
-  errors: ErrorsType,
-  onChange: (string, string | number | Object) => void,
-  getErrors: (string) => ErrorsType,
-};
-
-const useForm: (FormConfig) => FormProps = (config) => {
+const useForm = (config) => {
   const { initialValues = {}, onSubmit } = config;
 
   const [values, setValues] = React.useState(initialValues);
